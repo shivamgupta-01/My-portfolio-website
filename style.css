@@ -4,52 +4,7 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-/* --- मोबाइल के लिए खास कोड (Media Query) --- */
-@media (max-width: 768px) {
-    /* 1. तीन लाइन वाले बटन की स्टाइल */
-    .menu-icon {
-        display: block !important; /* इसे पक्का दिखाने के लिए */
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        width: 35px;
-        height: 30px;
-        z-index: 10000; /* सबसे ऊपर रखने के लिए */
-        cursor: pointer;
-        background: black; /* बटन के पीछे काला डिब्बा ताकि साफ़ दिखे */
-        padding: 5px;
-        border-radius: 5px;
-    }
 
-    /* 2. उन तीन लाइनों की स्टाइल */
-    .menu-icon span {
-        display: block;
-        width: 100%;
-        height: 4px;
-        background-color: white !important; /* सफ़ेद लाइनें */
-        margin-bottom: 5px;
-        border-radius: 2px;
-    }
-
-    /* 3. मेनू जो साइड से आएगा */
-    .nav-links {
-        display: none; /* शुरू में छुपा हुआ */
-        position: fixed;
-        right: 0;
-        top: 0;
-        width: 250px;
-        height: 100vh;
-        background: #111;
-        flex-direction: column;
-        padding-top: 80px;
-        z-index: 9999;
-    }
-
-    .nav-links.active {
-        display: flex !important; /* क्लिक करने पर दिखेगा */
-    }
-}
-}
 body {
     background-color: #050505;
     /* डार्क बैकग्राउंड */
@@ -439,34 +394,50 @@ body.light-mode a {
   color: black;
 }
 /* navbar phone ke liye  */
+/* --- मोबाइल के लिए खास कोड (Media Query) --- */
+/* पुराना @media वाला हिस्सा हटाकर यह नया पेस्ट करें */
 @media (max-width: 768px) {
-    /* 1. मेनू की स्टाइल (शुरू में छुपा हुआ) */
+    /* मेनू को स्क्रीन के बाहर दाईं तरफ छुपाने के लिए */
     .nav-links {
-        display: flex !important; /* इसे flex ही रहने दें */
         position: fixed;
+        right: -100%; 
         top: 0;
-        right: -100%; /* यह मेनू को स्क्रीन के बाहर दाईं ओर भेज देगा */
-        width: 250px;
+        width: 70%; 
         height: 100vh;
-        background: #111;
+        background: #111; 
+        display: flex;
         flex-direction: column;
+        align-items: center;
         padding-top: 80px;
-        transition: 0.4s ease; /* धीरे से बाहर आने के लिए */
+        transition: 0.5s;
         z-index: 999;
     }
 
-    /* 2. जब बटन दबेगा, तब यह क्लास उसे अंदर लाएगी */
+    /* जब बटन दबेगा तब मेनू अंदर आएगा */
     .nav-links.active {
-        right: 0; /* इसे 0 करने पर मेनू स्क्रीन के अंदर आ जाएगा */
+        right: 0 !important;
     }
 
-    /* 3. तीन लाइन वाला बटन (हमेशा दिखेगा) */
+    /* तीन लाइन वाला बटन (Hamburger) */
     .menu-icon {
-        display: block !important;
+        display: flex !important;
         position: fixed;
         top: 20px;
         right: 20px;
+        width: 30px;
+        height: 25px;
+        flex-direction: column;
+        justify-content: space-between;
         z-index: 1000;
         cursor: pointer;
     }
+
+    /* बटन की तीन लाइनें - इन्हें पिंक कलर दिया है ताकि आपकी थीम से मैच करें */
+    .menu-icon span {
+        width: 100%;
+        height: 4px;
+        background-color: #ff00ff !important; 
+        border-radius: 10px;
+    }
 }
+
