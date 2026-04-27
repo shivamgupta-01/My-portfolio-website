@@ -438,4 +438,35 @@ body.light-mode .navbar {
 body.light-mode a {
   color: black;
 }
+/* navbar phone ke liye  */
+@media (max-width: 768px) {
+    /* 1. मेनू की स्टाइल (शुरू में छुपा हुआ) */
+    .nav-links {
+        display: flex !important; /* इसे flex ही रहने दें */
+        position: fixed;
+        top: 0;
+        right: -100%; /* यह मेनू को स्क्रीन के बाहर दाईं ओर भेज देगा */
+        width: 250px;
+        height: 100vh;
+        background: #111;
+        flex-direction: column;
+        padding-top: 80px;
+        transition: 0.4s ease; /* धीरे से बाहर आने के लिए */
+        z-index: 999;
+    }
 
+    /* 2. जब बटन दबेगा, तब यह क्लास उसे अंदर लाएगी */
+    .nav-links.active {
+        right: 0; /* इसे 0 करने पर मेनू स्क्रीन के अंदर आ जाएगा */
+    }
+
+    /* 3. तीन लाइन वाला बटन (हमेशा दिखेगा) */
+    .menu-icon {
+        display: block !important;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        cursor: pointer;
+    }
+}
