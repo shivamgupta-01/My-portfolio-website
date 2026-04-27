@@ -1,0 +1,102 @@
+/* Dark Mode - सब pages के लिए */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --border-color: #dee2e6;
+    --card-bg: #ffffff;
+    --navbar-bg: #ffffff;
+    --button-primary: #007bff;
+    --button-hover: #0056b3;
+}
+
+[data-theme="dark"] {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --border-color: #333;
+    --card-bg: #1e1e1e;
+    --navbar-bg: #1e1e1e;
+    --button-primary: #0d6efd;
+    --button-hover: #0b5ed7;
+}
+
+* {
+    transition: all 0.3s ease !important;
+}
+
+body {
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* सभी common elements */
+.container,
+.card,
+.content,
+main,
+section,
+article {
+    background-color: var(--card-bg) !important;
+    color: var(--text-primary) !important;
+    border-color: var(--border-color) !important;
+}
+
+.navbar,
+.header,
+nav {
+    background-color: var(--navbar-bg) !important;
+}
+
+.btn-primary,
+.button-primary {
+    background-color: var(--button-primary) !important;
+    border-color: var(--button-primary) !important;
+}
+
+.btn-primary:hover,
+.button-primary:hover {
+    background-color: var(--button-hover) !important;
+    border-color: var(--button-hover) !important;
+}
+
+.table th,
+.table td {
+    border-color: var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 99999;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .theme-toggle {
+        top: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">@Codewith-Shivam</div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="About me.html">About</a></li>
+      <li><a href="journey.html">Journey</a></li>
+      <li><a href="dreams.html">Dreams</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact us.html">Contact</a></li>
+      <!-- <li><button  class="surprise-btn"> Surprise</button></li> -->
+      <li><button class="surprise-btn" onclick="goToSurprise()">Surprise</button></li>
+      <script>
+        function goToSurprise() {
+          window.location.href = "surprise.html";
+        }
+      </script>
+
+
+    </ul>
+    <!-- <div class="theme-toggle"><i class="fas fa-moon"></i></div> -->
+    <div class="theme-toggle">
+      <i class="fas fa-moon" id="themeIcon"></i>
+  </nav>
+  <script>
+    let icon = document.getElementById("themeIcon");
+
+    icon.onclick = function () {
+      document.body.classList.toggle("light-mode");
+
+      if (document.body.classList.contains("light-mode")) {
+        icon.classList.replace("fa-moon", "fa-sun");
+      } else {
+        icon.classList.replace("fa-sun", "fa-moon");
+      }
+    };
+  </script>
+
+</body>
+
+</html>

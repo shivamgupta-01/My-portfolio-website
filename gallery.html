@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <!-- <script src="script.js"></script> -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #050816;
+            color: white;
+        }
+
+        /* SECTION */
+        .gallery {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .gallery h1 {
+            font-size: 40px;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .gallery h1::after {
+            content: "";
+            width: 60px;
+            height: 3px;
+            background: #ff00ff;
+            display: block;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+
+        /* GRID */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        /* IMAGE BOX */
+        .img-box {
+            background: #0b0f2a;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 200px;
+            /* FIXED HEIGHT */
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.1);
+        }
+
+        .img-box:hover {
+            transform: scale(1.05);
+            border: 2px solid #ff00ff;
+            box-shadow: 0 0 20px #ff00ff;
+        }
+
+        /* IMAGE */
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            /* 🔥 TOP SAFE */
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR LOAD -->
+    <div id="navbar-placeholder"></div>
+
+    <section class="gallery">
+
+        <h1>My Gallery</h1>
+
+        <div class="gallery-container">
+
+            <div class="img-box">
+                <img src="img1.jpeg" alt="Image 1">
+            </div>
+
+            <div class="img-box">
+                <img src="img2.jpeg" alt="Image 2">
+            </div>
+
+            <div class="img-box">
+                <img src="img3.jpeg" alt="Image 3">
+            </div>
+
+            <div class="img-box">
+                <img src="img4.jpeg" alt="Image 4">
+            </div>
+
+            <div class="img-box">
+                <img src="img5.jpeg" alt="Image 5">
+            </div>
+
+            <div class="img-box">
+                <img src="img6.jpeg" alt="Image 6">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- NAVBAR SCRIPT -->
+    <script>
+        fetch('navbar.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(err => console.log("Navbar load error:", err));
+    </script>
+    <script src="dark-mode.js"></script>
+    <script>
+        function goToSurprise() {
+            window.location.href = "surprise.html";
+        }
+    </script>
+
+</body>
+
+</html>

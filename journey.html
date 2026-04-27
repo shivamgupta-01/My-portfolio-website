@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Journey</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dark-mode.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        /* journey.html */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b0f1a;
+            color: white;
+        }
+
+
+        .journey {
+            padding: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 40px;
+            font-size: 40px;
+            margin-bottom: 40px;
+            /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+            color: white;
+            /* font-size: 45px; */
+            text-transform: uppercase;
+            /* text-decoration: underline; */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        /* LEFT SIDE */
+        .timeline {
+            width: 45%;
+        }
+
+        .card {
+            background: #111827;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            text-align: left;
+            position: relative;
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.2);
+        }
+
+        .card h3 {
+            margin: 0;
+        }
+
+        .card p {
+            margin: 5px 0 0;
+            color: #ccc;
+        }
+
+        .icon {
+            position: absolute;
+            right: 20px;
+            top: 25px;
+            font-size: 30px;
+            color: gold;
+        }
+
+        .green {
+            color: #00ff99;
+        }
+
+        /* RIGHT SIDE */
+        .quote-box {
+            width: 45%;
+            background: #111827;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: left;
+            position: relative;
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+        }
+
+        .quote-box h2 {
+            margin: 0 0 15px;
+        }
+
+        .quote-box p {
+            color: #ccc;
+        }
+
+        .rocket {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            font-size: 60px;
+            color: #ff00ff;
+            text-shadow: 0 0 20px #ff00ff;
+        }
+
+        /* extra */
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            padding-left: 60px;
+        }
+
+        /* LINE */
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: 0;
+            width: 3px;
+            height: 100%;
+
+            background: linear-gradient(to bottom, #ff00ff, #8a2be2);
+
+            box-shadow: 0 0 10px #ff00ff,
+                0 0 20px #8a2be2;
+        }
+
+        /* DOT */
+        .card {
+            position: relative;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            left: -40px;
+            top: 30px;
+
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+
+            background: radial-gradient(circle, #ff00ff 40%, #8a2be2);
+
+            box-shadow: 0 0 10px #ff00ff,
+                0 0 20px #ff00ff,
+                0 0 40px #8a2be2;
+        }
+
+        .card::after {
+            content: "";
+            position: absolute;
+            left: -48px;
+            top: 22px;
+
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+
+            background: rgba(255, 0, 255, 0.2);
+            filter: blur(8px);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <section class="journey">
+
+        <h1>My Journey</h1>
+
+        <div class="container">
+
+            <!-- LEFT SIDE -->
+            <div class="timeline">
+
+                <div class="card">
+                    <h3>10th Board</h3>
+                    <p>Scored 94%</p>
+                    <i class="fa-solid fa-medal icon"></i>
+                </div>
+
+                <div class="card">
+                    <h3>NMMS Exam</h3>
+                    <p>Cleared NMMS Exam</p>
+                    <i class="fa-solid fa-circle-check icon green"></i>
+                </div>
+
+                <div class="card">
+                    <h3>11th (PCM)</h3>
+                    <p>Started JEE Preparation</p>
+                    <i class="fa-solid fa-book icon"></i>
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="quote-box">
+                <h2>Struggle Today<br>Success Tomorrow</h2>
+                <p>I believe in hard work, consistency and never giving up.
+                    “Discipline is my real strength.”
+                    “Consistency creates success.”
+                    “Hard work today builds the future I dream of.”
+                    “One step every day towards greatness.”
+                </p>
+
+                <i class="fa-solid fa-rocket rocket"></i>
+            </div>
+
+        </div>
+
+    </section>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+    <script src="dark-mode.js"></script>
+    <script>
+        function goToSurprise() {
+            window.location.href = "surprise.html";
+        }
+    </script>
+</body>
+
+</html>

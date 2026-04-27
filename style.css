@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #050505;
+    /* डार्क बैकग्राउंड */
+    color: white;
+    overflow-x: hidden;
+}
+.surprise-btn {
+  padding: 8px 18px;
+  background: transparent;
+  color: white;
+  border: 2px solid #ff00ff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.surprise-btn:hover {
+  transform: scale(1.1);   /* 🔥 zoom */
+  background: #ff00ff;
+  color: black;
+  box-shadow: 0 0 10px #ff00ff,
+              0 0 20px #ff00ff;
+}
+
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff00ff;
+    /* पिंक ग्लो */
+}
+
+.surprise-btn {
+    background: transparent;
+    border: 1px solid #ff00ff;
+    color: #ff00ff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+/* Hero Section Styling */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    padding-top: 80px;
+    background-image: url(https://img2.wallspic.com/previews/3/8/7/5/3/135783/135783-galaxy-electric_blue-night_sky-violet-blue-x750.jpg);
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: #ff00ff;
+    text-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #00d2ff;
+    /* लाइट ब्लू */
+}
+
+.social-icons {
+    margin: 20px 0;
+    font-size: 1.5rem;
+}
+
+.social-icons a {
+    color: white;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff00ff;
+}
+
+/* Birthday Card (Glassmorphism) */
+.countdown-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 0, 255, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+    width: fit-content;
+    margin-top: 30px;
+}
+
+.timer {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.time-part span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff00ff;
+}
+
+/* Image Circle Styling */
+.image-circle {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 5px solid #ff00ff;
+    box-shadow: 0 0 40px rgba(255, 0, 255, 0.5);
+    overflow: hidden;
+}
+
+.image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+div.logo {
+    font-size: 20px;
+    color: #ff00ff;
+    font-style: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.subtitle {
+    color: #a855f7;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 28px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+/* कलर्स और ग्लो इफेक्ट */
+.purple {
+    color: #a855f7;
+    text-shadow: 0 0 10px #a855f7;
+}
+
+.blue {
+    color: #3b82f6;
+    text-shadow: 0 0 10px #3b82f6;
+}
+
+.green {
+    color: #22c55e;
+    text-shadow: 0 0 10px #22c55e;
+}
+
+.pink {
+    color: #ec4899;
+    text-shadow: 0 0 10px #ec4899;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #9ca3af;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.highlight-green {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+/* Footer Styles */
+.main-footer {
+    background-color: #05070a;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 60px 20px 20px 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.footer-brand h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    color: #9ca3af;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-links h3,
+.footer-social h3 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #a855f7;
+    /* Purple color */
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.s-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Social Hover Effects */
+.github:hover {
+    background: #333;
+    color: #fff;
+    box-shadow: 0 0 10px #333;
+}
+
+.linkedin:hover {
+    background: #0077b5;
+    color: #fff;
+    box-shadow: 0 0 10px #0077b5;
+}
+
+.instagram:hover {
+    background: #e1306c;
+    color: #fff;
+    box-shadow: 0 0 10px #e1306c;
+}
+
+.twitter:hover {
+    background: #1da1f2;
+    color: #fff;
+    box-shadow: 0 0 10px #1da1f2;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.heart {
+    color: #ec4899;
+    animation: heartbeat 1.5s infinite;
+    display: inline-block;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .footer-content {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+/* darkmode */
+/* LIGHT MODE */
+body.light-mode {
+  background: #ffffff;
+  color: black;
+}
+
+body.light-mode .navbar {
+  background: #f1f1f1;
+}
+
+body.light-mode a {
+  color: black;
+}
+

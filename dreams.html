@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Dreams</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="dark-mode.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #050816;
+      color: white;
+    }
+
+    /* SECTION */
+    .dreams {
+      padding: 50px;
+      text-align: center;
+    }
+
+    .dreams h1 {
+      font-size: 40px;
+      margin-bottom: 40px;
+      position: relative;
+      margin-top: 40px;
+    }
+
+    .dreams h1::after {
+      content: "";
+      width: 60px;
+      height: 3px;
+      background: #ff00ff;
+      display: block;
+      margin: 10px auto;
+      border-radius: 5px;
+    }
+
+    /* CARD */
+    .dream-card {
+      background: #0b0f2a;
+      border-radius: 15px;
+      padding: 25px;
+      margin: 20px auto;
+      max-width: 700px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 20px rgba(255, 0, 255, 0.15);
+      transition: 0.3s;
+    }
+
+    .dream-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(255, 0, 255, 0.3);
+    }
+
+    /* ICON */
+    .icon {
+      font-size: 40px;
+      min-width: 50px;
+    }
+
+    .icon.coder {
+      color: #7c4dff;
+    }
+
+    .icon.free {
+      color: #00d4ff;
+    }
+
+    .icon.trade {
+      color: #00ff99;
+    }
+
+    /* TEXT */
+    .dream-text h2 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .dream-text p {
+      margin: 5px 0 0;
+      color: #ccc;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+  <section class="dreams">
+
+    <h1>My Dreams</h1>
+
+    <!-- CARD 1 -->
+    <div class="dream-card">
+      <i class="fa-solid fa-code icon coder"></i>
+      <div class="dream-text">
+        <h2>Become a Top Coder</h2>
+        <p>Solve real world problems and build amazing projects.</p>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="dream-card">
+      <i class="fa-solid fa-laptop icon free"></i>
+      <div class="dream-text">
+        <h2>Freelancing</h2>
+        <p>Work from anywhere and achieve financial freedom.</p>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="dream-card">
+      <i class="fa-solid fa-chart-line icon trade"></i>
+      <div class="dream-text">
+        <h2>Trading</h2>
+        <p>Learn trading and achieve financial independence.</p>
+      </div>
+    </div>
+
+  </section>
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+  </script>
+  <script src="dark-mode.js"></script>
+  <script>
+    function goToSurprise() {
+      window.location.href = "surprise.html";
+    }
+  </script>
+</body>
+
+</html>

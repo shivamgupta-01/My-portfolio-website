@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me</title>
+
+  <!-- FONT AWESOME (सबसे ऊपर) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- DARK MODE CSS -->
+  <link rel="stylesheet" href="dark-mode.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #050816;
+      /* ये dark mode के साथ override होगा */
+      color: white;
+    }
+
+    /* SECTION */
+    .contact {
+      padding: 50px;
+      text-align: center;
+    }
+
+    .contact h1 {
+      margin-top: 40px;
+      font-size: 40px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .contact h1::after {
+      content: "";
+      width: 60px;
+      height: 3px;
+      background: #ff00ff;
+      display: block;
+      margin: 10px auto;
+      border-radius: 5px;
+    }
+
+    /* CONTAINER */
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    /* BOX */
+    .box {
+      background: #0b0f2a;
+      /* dark mode override करेगा */
+      padding: 30px;
+      border-radius: 15px;
+      width: 350px;
+      text-align: left;
+      box-shadow: 0 0 20px rgba(255, 0, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .box h2 {
+      margin-top: 0;
+    }
+
+    .box p {
+      color: #ccc;
+    }
+
+    /* SOCIAL ICONS */
+    .social {
+      margin-top: 20px;
+    }
+
+    .social i {
+      font-size: 20px;
+      margin-right: 15px;
+      background: #111827;
+      padding: 12px;
+      border-radius: 50%;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .social i:hover {
+      background: #ff00ff;
+      box-shadow: 0 0 10px #ff00ff;
+    }
+
+    /* RIGHT SIDE DETAILS */
+    .info {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .info i {
+      color: #ff00ff;
+      font-size: 18px;
+    }
+
+    .info span {
+      display: block;
+      color: #ccc;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- MAIN CONTENT -->
+  <section class="contact">
+    <h1>Contact Me</h1>
+
+    <div class="contact-container">
+      <!-- LEFT BOX -->
+      <div class="box">
+        <h2>Let's Connect</h2>
+        <p>Feel free to reach out to me through any platform.</p>
+
+        <div class="social">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-github"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+      </div>
+
+      <!-- RIGHT BOX -->
+      <div class="box">
+        <div class="info">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <strong>Email</strong>
+            <span>shivamguptaofficial@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="info">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <strong>Location</strong>
+            <span>India</span>
+          </div>
+        </div>
+
+        <div class="info">
+          <i class="fa-solid fa-circle-check"></i>
+          <div>
+            <strong>Status</strong>
+            <span>Available for opportunities</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCRIPTS (सब body के अंत में) -->
+  <script>
+    // Navbar load
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+  </script>
+
+  <!-- DARK MODE JS (सबसे अंत में) -->
+  <script src="dark-mode.js"></script>
+  <script>
+    function goToSurprise() {
+      window.location.href = "surprise.html";
+    }
+  </script>
+</body>
+
+</html>

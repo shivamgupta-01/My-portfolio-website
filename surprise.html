@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Surprise</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      /* background: radial-gradient(circle at top, #0b0f2a, #050816); */
+      background-color: #050816;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* ✨ STARS BACKGROUND */
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      opacity: 0.8;
+      animation: twinkle 2s infinite alternate;
+    }
+
+    @keyframes twinkle {
+      from {
+        opacity: 0.2;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* CENTER BOX */
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* 🎁 GIFT */
+    .gift {
+      font-size: 90px;
+      cursor: pointer;
+      transition: 0.3s;
+      text-shadow: 0 0 20px #ff00ff;
+    }
+
+    .gift:hover {
+      transform: scale(1.2) rotate(10deg);
+    }
+
+    /* MESSAGE */
+    .message {
+      display: none;
+      margin-top: 20px;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .message h1 {
+      font-size: 42px;
+      color: #ff00ff;
+      text-shadow: 0 0 15px #ff00ff;
+    }
+
+    .message h2 {
+      color: #00d4ff;
+    }
+
+    .message p {
+      color: #ccc;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    /* 🌸 FLOWERS */
+    .flower {
+      position: absolute;
+      top: -50px;
+      font-size: 20px;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ⭐ STARS -->
+  <script>
+    for (let i = 0; i < 60; i++) {
+      let star = document.createElement("div");
+      star.classList.add("star");
+      star.style.left = Math.random() * 100 + "vw";
+      star.style.top = Math.random() * 100 + "vh";
+      document.body.appendChild(star);
+    }
+  </script>
+
+  <div class="container">
+    <!-- 🎁 GIFT -->
+    <div class="gift" onclick="openGift()">🎁</div>
+
+    <!-- MESSAGE -->
+    <div class="message" id="msg">
+      <h1>🎉 Happy Birthday Shivam 🎂</h1>
+      <h2>28<sup>th</sup> April</h2>
+      <p>
+        Wishing you a day filled with happiness and a year filled with success.
+        May all your dreams come true and you achieve great heights in life.
+        Keep shining and keep growing! 🚀
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function openGift() {
+      document.getElementById("msg").style.display = "block";
+
+      // 🌸 Flowers
+      for (let i = 0; i < 50; i++) {
+        let flower = document.createElement("div");
+        flower.classList.add("flower");
+        flower.innerHTML = "🌸";
+
+        flower.style.left = Math.random() * 100 + "vw";
+        flower.style.animationDuration = (Math.random() * 3 + 2) + "s";
+
+        document.body.appendChild(flower);
+      }
+    }
+  </script>
+
+</body>
+
+</html>
