@@ -145,9 +145,15 @@
 
     </script>
     <script src="dark-mode.js"></script>
-    <script>
+    <!-- <script>
 function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("active");
+}
+</script> -->
+    <script>
+function toggleMenu() {
+    const links = document.getElementById("navLinks");
+    links.classList.toggle("active");
 }
 </script>
 </body>
