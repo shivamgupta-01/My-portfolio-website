@@ -6,66 +6,41 @@
 }
 /* --- मोबाइल के लिए खास कोड (Media Query) --- */
 @media (max-width: 768px) {
-    
-    /* 1. पूरे पेज को फोन की स्क्रीन में फिट करना */
-    body {
-        overflow-x: hidden; /* साइड स्क्रॉल खत्म करने के लिए */
-    }
-
-    /* 2. नेवबार को साइड मेनू बनाना */
+    /* मेनू को डिफ़ॉल्ट रूप से छुपाएं और साइड में रखें */
     .nav-links {
+        display: none; /* यहाँ इसे छुपाया गया है */
         position: fixed;
-        right: -100%; /* शुरुआत में मेनू बाहर रहेगा */
+        right: 0;
         top: 0;
         height: 100vh;
-        width: 250px; /* साइड मेनू की चौड़ाई */
-        background-color: #333; /* अपनी थीम के हिसाब से बदलें */
-        display: flex;
+        width: 250px;
+        background: #222;
         flex-direction: column;
-        align-items: center;
-        padding-top: 80px;
-        transition: 0.5s; /* स्लाइड होने की स्पीड */
-        z-index: 1000;
+        padding-top: 100px;
+        z-index: 999;
     }
 
-    /* जब मेनू खुलेगा तो इसे दिखाने के लिए */
+    /* जब 'active' क्लास जुड़ जाएगी, तब मेनू दिखेगा */
     .nav-links.active {
-        right: 0;
+        display: flex !important; 
     }
 
-    .nav-links li {
-        margin: 20px 0;
-    }
-
-    /* 3. तीन लाइन वाला बटन (Hamburger) दिखाना */
+    /* तीन लाइन वाला बटन पक्का दिखे इसके लिए */
     .menu-icon {
         display: block !important;
-        cursor: pointer;
-        z-index: 1001;
-        position: absolute;
-        top: 20px;
+        position: fixed;
         right: 20px;
+        top: 20px;
+        z-index: 1000;
+        cursor: pointer;
     }
 
     .menu-icon span {
         display: block;
-        width: 25px;
-        height: 3px;
-        background: white;
-        margin: 5px;
-        transition: 0.3s;
-    }
-
-    /* 4. बाकी कंटेंट (Images/Text) को छोटा करना ताकि वो बाहर न भागें */
-    .container, .main-section, .about-section {
-        width: 100% !important;
-        padding: 20px !important;
-        flex-direction: column !important; /* चीजों को एक के नीचे एक लाने के लिए */
-    }
-
-    img {
-        max-width: 100% !important;
-        height: auto !important;
+        width: 30px;
+        height: 4px;
+        background-color: #ffffff; /* अगर बैकग्राउंड सफ़ेद है तो इसे काला (#000) कर दें */
+        margin: 6px 0;
     }
 }
  
