@@ -24,6 +24,11 @@
             <li><a href="contact us.html">Contact</a></li>
             <!-- <li><button class="surprise-btn">Surprise</button></li> -->
             <li><button class="surprise-btn" onclick="goToSurprise()">Surprise</button></li>
+            <div class="menu-icon" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 
             <script>
                 function goToSurprise() {
@@ -140,6 +145,11 @@
 
     </script>
     <script src="dark-mode.js"></script>
+    <script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
 </body>
 
 </html>
