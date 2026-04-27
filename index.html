@@ -15,14 +15,11 @@
 
    <nav class="navbar">
     <div class="logo">@Shivam Gupta</div>
-    
-    <!-- HAMBURGER RIGHT CORNER ME 🔥 -->
-    <div class="hamburger" id="hamburger">
+    <div class="hamburger" id="menuToggle">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
     </div>
-
     <ul class="nav-links" id="navLinks">
         <li><a href="home.html">Home</a></li>
         <li><a href="About me.html">About</a></li>
@@ -158,6 +155,9 @@
 function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("active");
 }
+</script>
+    <script>
+document.getElementById('menuToggle').onclick=function(){document.getElementById('navLinks').classList.toggle('active');document.getElementById('menuToggle').classList.toggle('active')};document.querySelectorAll('.nav-links a, .surprise-btn').forEach(e=>e.onclick=()=>{document.getElementById('navLinks').classList.remove('active');document.getElementById('menuToggle').classList.remove('active')})
 </script>
 </body>
 
