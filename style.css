@@ -4,7 +4,23 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+@media (max-width: 768px) {
+  /* यहाँ आप उन चीजों को सही करेंगे जो फोन पर खराब दिख रही हैं */
+  
+  .container, .navbar, .main-section { 
+    width: 100%; /* विड्थ को 100% कर दें ताकि वो स्क्रीन से बाहर न जाए */
+    flex-direction: column; /* अगर Flexbox यूज़ किया है तो चीजों को एक के नीचे एक लाने के लिए */
+  }
 
+  img {
+    max-width: 100%; /* इमेजेस को स्क्रीन के अंदर रखने के लिए */
+    height: auto;
+  }
+
+  body {
+    font-size: 14px; /* फोन के लिए फॉन्ट साइज थोड़ा छोटा कर दें */
+  }
+}
 body {
     background-color: #050505;
     /* डार्क बैकग्राउंड */
