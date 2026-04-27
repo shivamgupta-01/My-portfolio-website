@@ -440,4 +440,30 @@ body.light-mode a {
         border-radius: 10px;
     }
 }
+/* add media  */
+@media (max-width: 768px) {
+    /* 1. हीरो सेक्शन को फोन के लिए सीधा करना */
+    .hero {
+        flex-direction: column; /* फोटो को टेक्स्ट के नीचे लाने के लिए */
+        height: auto;
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* फोन के लिए नाम छोटा करें */
+    }
+
+    /* 2. इमेज सर्कल को छोटा करना ताकि फोन में फिट आए */
+    .image-circle {
+        width: 250px;
+        height: 250px;
+        margin-top: 30px;
+    }
+
+    /* 3. नेवबार के लिंक्स के बीच दूरी */
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
 
